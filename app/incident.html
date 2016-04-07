@@ -1,0 +1,36 @@
+<section>
+  <div class="col-xs-12 col-sm-4 col-md-4">
+    <h2>All Incidents</h2>
+  </div>
+
+  <div class="col-xs-12 col-sm-8 col-md-8 pull-right">
+  <div class="hidden-xs" style="margin-top: 20px;"></div>
+  <div class="input-group">
+    <input class="form-control" data-bind="value: incident_summary, valueUpdate: 'afterkeydown'" id="incident_summary" placeholder="Incident Summary">
+    <span class="input-group-btn">
+          <button disabled="" class="btn btn-default" type="submit" data-bind="click: addIncident, enable: incident_summary">Add</button>
+    </span>
+  </div>
+  <div class="hidden-md" style="margin-bottom: 20px;"></div>
+  </div>
+  <table class="table table-hover">
+    <tr>
+      <th>Refernece Number</th>
+      <th>Summary</th>
+      <th>Current Status</th>
+      <th>Logged</th>
+      <th>End User</th>
+      <th>Minutes To Breach</th>
+    </tr>
+    <tbody data-bind="foreach: { data: incidents }">
+      <tr>
+        <td data-bind="text: reference_number"></td>
+        <td data-bind="text: summary"></td>
+        <td data-bind="text: status"></td>
+        <td data-bind="text: logged"></td>
+        <td data-bind="text: user_id"></td>
+        <td data-bind="text: breach_minutes"></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

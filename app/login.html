@@ -1,0 +1,13 @@
+<section>
+  <style> .navbar-fixed-top { display: none } </style>
+  <div class="container">
+      <form class="form-signin">
+        <img class="col-xs-12 col-sm-12 col-md-12" src="img/logo_placeholder.png" style="padding: 0px; margin-bottom: 10px;">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="text" id="username" class="form-control" placeholder="User Name" data-bind="value: username, valueUpdate: 'afterkeydown'"></input>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" data-bind="value: password, valueUpdate: 'afterkeydown'"></input>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" data-bind="click: loginUser, enable: username, password">Sign in</button>
+      </form>
+    </div>
+</section>
